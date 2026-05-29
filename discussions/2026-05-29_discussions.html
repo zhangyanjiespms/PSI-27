@@ -30,17 +30,27 @@
   <!-- ============================================================ -->
 
   <div class="card">
-    <h3>ITER Limiter Work — Recognition and Future Direction</h3>
-    <p><strong>People:</strong> Andrei Fasov, Xavier Bonnin, Richard Pitts</p>
-    <h4>Outcome</h4>
+    <h3>ITER Limiter Work — Recognition and Revised Direction</h3>
+    <p><strong>People:</strong> Andrei Pshenov, Xavier Bonnin, Richard Pitts</p>
+    <h4>Conference outcome</h4>
     <ul>
-      <li>The previous ITER limiter SOLPS-ITER simulations were <strong>cited in two separate invited talks</strong> at this conference, confirming the work sits in a high-visibility area.</li>
-      <li>Discussion with ITER colleagues confirmed this is a <strong>top-priority research area</strong> for ITER first-wall/limiter physics.</li>
-      <li>Agreement to <strong>further this work</strong>; specific directions to be defined in a follow-up meeting.</li>
+      <li>The previous ITER limiter SOLPS-ITER simulations were <strong>cited in two separate invited talks</strong>, confirming the work is high-visibility.</li>
+      <li>Agreement to <strong>further this work</strong>; specific approach clarified in post-conference email from Andrei (2026-05-29).</li>
+    </ul>
+    <h4>Revised plan — from Andrei's email (2026-05-29)</h4>
+    <ul>
+      <li><strong>Wide-grid (WG) approach is de-prioritised.</strong> No converged WG limiter cases exist on the cluster. Andrei has only worked on narrow-grid limiter geometry for WHA assessment. The Eirene surfmode-split functionality needed for spatially dependent prompt redeposition in WG is also not yet available.</li>
+      <li><strong>New approach: fluid neutrals on existing narrow-grid cases.</strong> Run a fluid neutral scan (with and without prompt redeposition) on the existing narrow-grid limiter setup. The fluid neutral model already has a self-consistent prompt redeposition implementation — no Eirene surfmode splitting needed.</li>
+      <li>Kinetic neutral effects are expected to be <strong>negligible</strong> in this plasma regime.</li>
+      <li>If fluid neutral results are consistent with kinetic neutral results → the door opens for <strong>time-dependent simulations</strong> (kinetic neutrals would make this computationally infeasible). <em>This is identified as the main scientific priority.</em></li>
+      <li>WG remains a future option only if an equilibrium is selected where plasma is close to both the HFS and LFS walls simultaneously.</li>
     </ul>
     <h4>Action items</h4>
     <ul>
-      <li>&#9744; Follow up with Andrei / Xavier / Richard to define the next steps for the ITER limiter simulation programme.</li>
+      <li>&#9745; Follow up with Andrei post-conference — <em>done, email received 2026-05-29</em></li>
+      <li>&#9744; Set up fluid neutral scan on existing narrow-grid limiter cases (with / without prompt redeposition).</li>
+      <li>&#9744; Compare fluid vs. kinetic neutral results; report to Andrei.</li>
+      <li>&#9744; If results are consistent: plan time-dependent limiter phase simulations.</li>
     </ul>
   </div>
 
