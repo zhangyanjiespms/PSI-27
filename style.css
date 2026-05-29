@@ -1,0 +1,178 @@
+:root {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --border: #dee2e6;
+  --accent: #2c5f8a;
+  --accent-light: #e8f1f8;
+  --text: #212529;
+  --muted: #6c757d;
+  --tag-open: #dc3545;
+  --tag-progress: #fd7e14;
+  --tag-done: #198754;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+nav {
+  background: var(--accent);
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,.15);
+}
+
+nav a {
+  color: rgba(255,255,255,.75);
+  text-decoration: none;
+  padding: .75rem 1rem;
+  font-size: .85rem;
+  white-space: nowrap;
+  transition: color .15s, background .15s;
+}
+
+nav a:hover, nav a.active {
+  color: #fff;
+  background: rgba(255,255,255,.12);
+}
+
+nav .home { font-weight: 600; font-size: .9rem; color: #fff; border-right: 1px solid rgba(255,255,255,.2); margin-right: .5rem; }
+
+.container {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem 4rem;
+}
+
+header.page-header {
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+header.page-header h1 { font-size: 1.6rem; color: var(--accent); }
+header.page-header .meta { font-size: .85rem; color: var(--muted); margin-top: .3rem; }
+
+h2 {
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin: 2rem 0 .6rem;
+  padding-bottom: .3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 { font-size: 1rem; font-weight: 600; margin: 1.4rem 0 .4rem; }
+h4 { font-size: .9rem; font-weight: 600; margin: 1rem 0 .3rem; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+
+p { margin: .5rem 0; }
+ul, ol { padding-left: 1.4rem; margin: .4rem 0; }
+li { margin: .25rem 0; }
+
+a { color: var(--accent); }
+
+code {
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: .1em .35em;
+  font-size: .88em;
+  font-family: "SFMono-Regular", Consolas, monospace;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+
+.card.highlight { border-left: 3px solid var(--accent); background: var(--accent-light); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: .75rem 0;
+  font-size: .9rem;
+}
+
+th {
+  background: var(--accent);
+  color: #fff;
+  text-align: left;
+  padding: .55rem .8rem;
+  font-weight: 600;
+}
+
+td { padding: .5rem .8rem; border-bottom: 1px solid var(--border); }
+tr:last-child td { border-bottom: none; }
+tr:nth-child(even) td { background: #f8f9fa; }
+
+.badge {
+  display: inline-block;
+  padding: .15em .6em;
+  border-radius: 3px;
+  font-size: .78rem;
+  font-weight: 600;
+}
+
+.badge-open { background: #fde8ea; color: var(--tag-open); }
+.badge-progress { background: #fff3e0; color: var(--tag-progress); }
+.badge-done { background: #e6f4ea; color: var(--tag-done); }
+.badge-pending { background: #f0f0f0; color: var(--muted); }
+
+.phase {
+  border-left: 3px solid var(--accent);
+  background: var(--surface);
+  border-radius: 0 6px 6px 0;
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 1.2rem 0;
+}
+
+.phase-label {
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--accent);
+  margin-bottom: .3rem;
+}
+
+/* Index cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.grid-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: 6px;
+  padding: 1.1rem 1.2rem;
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  transition: box-shadow .15s, transform .15s;
+}
+
+.grid-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.1); transform: translateY(-2px); }
+.grid-card .icon { font-size: 1.4rem; margin-bottom: .5rem; }
+.grid-card h3 { font-size: .95rem; color: var(--accent); margin: 0 0 .3rem; }
+.grid-card p { font-size: .82rem; color: var(--muted); margin: 0; }
+
+.tag-list { display: flex; gap: .4rem; flex-wrap: wrap; margin: .5rem 0; }
